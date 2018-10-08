@@ -4,6 +4,7 @@ The selection sort algorithm sorts an array by repeatedly finding the minimum el
 The algorithm maintains two subarrays in a given array.
 """
 
+
 def selectionSort(unsortedList):
     lst = unsortedList[::]
     for i in range(len(lst)):
@@ -11,8 +12,9 @@ def selectionSort(unsortedList):
         for j in range(i, len(lst)):
             if lst[temp] > lst[j]:
                 temp = j
+
         lst[i], lst[temp] = lst[temp], lst[i]
     return lst
 
-print(selectionSort([2,1,54,5,345,3,45,13,21,3]))
-print(selectionSort([0,2,89,3,6,57,65,76,57,653,4546,43]))
+print(selectionSort([2, 1, 54, 5, 345, 3, 45, 13, 21, 3]))
+print(selectionSort([0, 2, 89, 3, 6, 57, 65, 76, 57, 653, 4546, 43]))
