@@ -6,8 +6,8 @@ Bubble sort, compares each pair of adjacent items and swaps them if they are in 
 
 def bubbleSort(unsorted_lst):
     lst = unsorted_lst[::]
-    for i in range(1, len(lst)):
-        for j in range(i):
+    for i in range(len(lst)):
+        for j in range(1, len(lst)):
             if lst[j] < lst[j-1]:
                 lst[j], lst[j-1] = lst[j-1], lst[j]
     return lst
