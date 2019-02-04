@@ -8,5 +8,9 @@ multiple(5, [10, 1, 20, 2]) → [10, 10, 20, 20]
 multiple(3, [10, 1, 9, 20]) → [10, 1, 9, 9]
 """
 
-def foo(n, lst):
+def multiple(n, lst):
     pass
+
+print(multiple(10, [2, 10, 3, 4, 20, 5]))
+print(multiple(5, [10, 1, 20, 2]))
+print(multiple(3, [10, 1, 9, 20]))
