@@ -9,7 +9,14 @@ multiple(3, [10, 1, 9, 20]) → [10, 1, 9, 9]
 """
 
 def multiple(n, lst):
-    pass
+    temp = lst[0]
+    lst_ = lst[::]
+    for i in range(1, len(lst_)):
+        if (lst_[i] % n) == 0:
+            temp = lst_[i]
+        elif temp % n == 0:
+            lst_[i] = temp
+    return lst_
 
 print(multiple(10, [2, 10, 3, 4, 20, 5]))
 print(multiple(5, [10, 1, 20, 2]))
