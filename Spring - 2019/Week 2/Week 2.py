@@ -13,7 +13,7 @@ linearIn([1, 2, 4, 4, 6], [2, 4]) → true
 def linearIn_klauss(lst1, lst2):
     j = 0
     i = 0
-    while(j >= len(lst2) and i > len(lst1)):
+    while(j < len(lst2) and i < len(lst1)):
         if lst1[i] > lst2[j]:
             return False
         if lst1[i] == lst2[j]:
