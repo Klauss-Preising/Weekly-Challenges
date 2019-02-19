@@ -54,7 +54,8 @@ def linearIn_thahera(outer, inner):
             break
     return ans
 
-def linearIn(lst1,lst2):
+# Function by sebi
+def linearIn_sebi(lst1,lst2):
     score = 0
     for i in lst2:
         if i in lst1:
