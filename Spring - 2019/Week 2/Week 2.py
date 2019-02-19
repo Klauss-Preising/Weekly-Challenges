@@ -53,3 +53,13 @@ def linearIn_thahera(outer, inner):
             ans = False
             break
     return ans
+
+def linearIn(lst1,lst2):
+    score = 0
+    for i in lst2:
+        if i in lst1:
+            score += 1
+    if score == len(lst2):
+        return True
+    else:
+        return False
