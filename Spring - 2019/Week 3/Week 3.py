@@ -73,9 +73,9 @@ def groupSumClump_georgios(start, lst, trgt):
         return False
 
 
-print("groupSumClump(0, consecutive([2, 4, 8]), 10) →", groupSumClump_georgios(0, consecutive([2, 4, 8]), 10))
-print("groupSumClump(0, consecutive([1, 2, 4, 8, 1]), 14) →", groupSumClump_georgios(0, consecutive([1, 2, 4, 8, 1]), 14))
-print("groupSumClump(0, consecutive([2, 4, 4, 8]), 14) →", groupSumClump_georgios(0, consecutive([2, 4, 4, 8]), 14))
+print("groupSumClump_georgios(0, consecutive([2, 4, 8]), 10) →", groupSumClump_georgios(0, consecutive([2, 4, 8]), 10))
+print("groupSumClump_georgios(0, consecutive([1, 2, 4, 8, 1]), 14) →", groupSumClump_georgios(0, consecutive([1, 2, 4, 8, 1]), 14))
+print("groupSumClump_georgios(0, consecutive([2, 4, 4, 8]), 14) →", groupSumClump_georgios(0, consecutive([2, 4, 4, 8]), 14))
 
 
 def groupSumClump_charlie(start, lst, target):
