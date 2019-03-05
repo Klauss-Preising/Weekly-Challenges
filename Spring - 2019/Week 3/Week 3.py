@@ -59,23 +59,23 @@ def consecutive(lst):
     return lst
 
 
-def groupSumClump(start, lst, trgt):
+def groupSumClump_georgios(start, lst, trgt):
     # check if length of list is smaller than start and target is not 0
     if start >= len(lst):
         return trgt == 0
     # check if increasing start and subtracting the previous number from target gets to closer to 0
-    elif groupSumClump(start + 1, lst, trgt - lst[start]):
+    elif groupSumClump_georgios(start + 1, lst, trgt - lst[start]):
         return True
     # if previous number of list was too big, skip it
-    elif groupSumClump(start + 1, lst, trgt):
+    elif groupSumClump_georgios(start + 1, lst, trgt):
         return True
     else:
         return False
 
 
-print("groupSumClump(0, consecutive([2, 4, 8]), 10) →", groupSumClump(0, consecutive([2, 4, 8]), 10))
-print("groupSumClump(0, consecutive([1, 2, 4, 8, 1]), 14) →", groupSumClump(0, consecutive([1, 2, 4, 8, 1]), 14))
-print("groupSumClump(0, consecutive([2, 4, 4, 8]), 14) →", groupSumClump(0, consecutive([2, 4, 4, 8]), 14))
+print("groupSumClump(0, consecutive([2, 4, 8]), 10) →", groupSumClump_georgios(0, consecutive([2, 4, 8]), 10))
+print("groupSumClump(0, consecutive([1, 2, 4, 8, 1]), 14) →", groupSumClump_georgios(0, consecutive([1, 2, 4, 8, 1]), 14))
+print("groupSumClump(0, consecutive([2, 4, 4, 8]), 14) →", groupSumClump_georgios(0, consecutive([2, 4, 4, 8]), 14))
 
 
 def groupSumClump_charlie(start, lst, target):
