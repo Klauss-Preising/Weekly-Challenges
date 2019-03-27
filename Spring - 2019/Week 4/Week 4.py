@@ -10,4 +10,19 @@ turn off 499,499 through 500,500 would turn off (or leave off) the middle four l
 How many lights are on?
 """
 
+lights = [[0 for i in range(1000)]for i in range(1000)]
 
+fh = open("input.txt", "r")
+# code
+fh.close()
+
+
+def turn(on, pos1, pos2):
+    pass
+
+
+def toggle(pos1, pos2):
+    pass
+
+# print answer
+print()
