@@ -13,16 +13,36 @@ How many lights are on?
 lights = [[0 for i in range(1000)]for i in range(1000)]
 
 fh = open("input.txt", "r")
-# code
+instructions = [i.replace("\n", "").split() for i in fh.readlines()]
 fh.close()
 
 
 def turn(on, pos1, pos2):
-    pass
+    for i in range(pos1[0], pos2[0]+1):
+        for j in range(pos1[1], pos2[1]+1):
+            lights[i][j] = 1 if on else 0
 
 
 def toggle(pos1, pos2):
-    pass
+    for i in range(pos1[0], pos2[0]+1):
+        for j in range(pos1[1], pos2[1]+1):
+            lights[i][j] = 1 if lights[i][j] == 0 else 0
 
-# print answer
-print()
+
+for i in instructions:
+    if i[0] == "turn":
+        pos1 = [int(i) for i in i[2].split(",")]
+        pos2 = [int(i) for i in i[4].split(",")]
+        turn(i[1] == "on", pos1, pos2)
+    else:
+        pos1 = [int(i) for i in i[1].split(",")]
+        pos2 = [int(i) for i in i[3].split(",")]
+        toggle(pos1, pos2)
+
+
+answer = 0
+
+for i in lights:
+    answer += sum(i)
+
+print(answer)
